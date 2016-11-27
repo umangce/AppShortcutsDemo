@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:shortcutDisabledMessage="@string/static_shortcut_disabled_message"
+        android:shortcutId="static"
+        android:shortcutLongLabel="@string/static_shortcut_long_label"
+        android:shortcutShortLabel="@string/static_shortcut_short_label">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.androidbytes.appshortcuts.view.MainActivity"
+            android:targetPackage="com.androidbytes.appshortcuts" />
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.androidbytes.appshortcuts.view.StaticShortcutActivity"
+            android:targetPackage="com.androidbytes.appshortcuts" />
+    </shortcut>
+</shortcuts>
