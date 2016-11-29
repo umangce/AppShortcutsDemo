@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">AppShortcuts</string>
 
-    <string name="static_shortcut_disabled_message">Disabled Shortcut</string>
-    <string name="static_shortcut_long_label">Long Label</string>
-    <string name="static_shortcut_short_label">Short Label</string>
+    <string name="shortcut_disabled_msg">Disabled Shortcut</string>
+    <string name="shortcut_long_label">Static Shortcut Long Label</string>
+    <string name="shortcut_short_label">Static</string>
+
+    <string name="label_static_shortcut">Screen from Static App Shortcut</string>
+    <string name="label_put_dynamic_shortcut_in_middle">Put Dynamic Shortcut in middle</string>
 </resources>

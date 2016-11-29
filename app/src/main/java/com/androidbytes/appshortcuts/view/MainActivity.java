@@ -23,19 +23,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
-
-        ShortcutInfo shortcut = new ShortcutInfo.Builder(this, "id1")
+        ShortcutInfo blogShortcut = new ShortcutInfo.Builder(this, "blog_shortcut")
                 .setShortLabel("My Blog")
-                .setLongLabel("Open the web site")
+                .setLongLabel("Open My Blog on Medium.com")
+                .setRank(0)
                 .setIcon(Icon.createWithResource(this, R.drawable.medium_icon))
                 .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.BLOG_URL)))
                 .build();
 
-        shortcutManager.setDynamicShortcuts(Arrays.asList(shortcut));
+        ShortcutInfo dynamicShortcut = new ShortcutInfo.Builder(this, "dynamic_shortcut")
+                .setShortLabel("Dynamic")
+                .setLongLabel("Dynamic Shortcut")
+                .setRank(0)
+                .setIntent(new Intent(Constants.DYNAMIC_SHORTCUT_ACTIVITY_ACTION))
+                .build();
 
-        List<ShortcutInfo> staticShortcuts = shortcutManager.getManifestShortcuts();
-        Log.d("TAG", staticShortcuts.get(0).getShortLabel().toString());
+        shortcutManager.setDynamicShortcuts(Arrays.asList(blogShortcut, dynamicShortcut));
+
+  //      List<ShortcutInfo> staticShortcuts = shortcutManager.getManifestShortcuts();
+//        Log.d("TAG", staticShortcuts.get(0).getShortLabel().toString());
 //        List<ShortcutInfo> dynamicShortcuts = shortcutManager.getDynamicShortcuts();
 //        ShortcutInfo shortcutInfo = dynamicShortcuts.get(0);
+
     }
 }

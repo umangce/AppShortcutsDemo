@@ -19,8 +19,13 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-
         <activity android:name=".view.StaticShortcutActivity" />
+        <activity android:name=".view.DynamicShortcutActivity">
+            <intent-filter>
+                <action android:name="com.androidbytes.appshortcuts.dynamic_shortcut" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
